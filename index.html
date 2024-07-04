@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+        </header>
+        <div class="main-content">
+            <div class="chart-container">
+                <canvas id="doughnutChart"></canvas>
+                <div class="total-amount">
+                    <h2>Total</h2>
+                    <p id="total-amount">$0.00</p>
+                </div>
+            </div>
+            <div class="transaction-container">
+                <h2>Transaction</h2>
+                <form id="form">
+                    <input type="text" id="text" placeholder="Description">
+                    <select id="category">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                        <option value="savings">Savings</option>
+                    </select>
+                    <input type="number" id="amount" placeholder="Amount">
+                    <button type="submit" class="btn">Make Transaction</button>
+                </form>
+                <h2>History</h2>
+                <ul id="list" class="list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
